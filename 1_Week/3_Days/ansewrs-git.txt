@@ -1,0 +1,255 @@
+ Git Presentation Excercises
+ ===========================
+
+ To hand in
+ ----------
+ - Submit your answers in a *.txt file.
+
+
+
+ Excercise 1 - setting up a local git repository
+ -----------------------------------------------
+# - create a folder, "FOLDER1"
+- creating the folder on name "Folder1"
+
+# - git init
+- doing the commend git init
+
+# - look at the .git folder
+- in the .git folder we have folder that having branches,gooks,info,objects,refs anf also config file,description file,Head file.
+
+# - create a short file
+-create text file by the name "test1"
+
+# - check git status. where is this file in git terms (local-untracked / staged / committed)
+-when i check the git status i see i have local-untracked file
+
+# - stage the file
+- to stage the file i use the commend git add
+# - check git status. where is this file in git terms (local-untracked / staged / committed)
+- the status of the file now is modified and not staged
+ 
+# - commit the file
+- to commit the file i use the commend git commit -m "First commit"
+
+# - check git status. where is this file in git terms (local-untracked / staged / committed)
+-the status of the file is now committed
+
+# - change the file
+- to change the file i adding a new line
+# - check git status. where is this file in git terms (local-untracked / staged / committed)
+- now the status of the file is local-untracked
+
+# - stage the file
+- to stage the file i using again in the commend git add
+# - check git status. where is this file in git terms (local-untracked / staged / committed)
+- the status of the file modified and not staged
+
+
+# - commit the file
+-to commit the file i using the commend git commit -m
+
+# - check git status. where is this file in git terms (local-untracked / staged / committed)
+- the status of the file is committed
+
+# - create another file
+- create new file cy the name "test2"
+# - commit it
+- doing the commends git status,git add,git commit -m "Thierd commit"
+# - take a look at the git log
+- when i look in git log i can see all the commits that i created and see the date and the time of the coomit and the author and also the commit ID.
+
+
+ Excercise 2 - Surfing the log
+-----------------------------
+# - add 3 more commits to your repository (change & commit x 3)
+- create new file by the name ".gitignore"
+- doing the commends git status,git add,git commit -m "fourth commit"
+
+- change the file "test2.txt"
+- doing the commends git status,git add,git commit -m "five commit"
+
+- change the file "test2.txt"
+- doing the commends git status,git add,git commit -m "six commit"
+
+- change the file "test2.txt"
+- doing the commends git status,git add,git commit -m "seven commit"
+
+
+# - list all your commits using git log
+- doing git log --oneline
+# - checkout an old commit
+- doing checkout to my fourth commit 
+# - examine
+#   - the log, with & without --all
+#      - where is HEAD? What state is it in?
+#      - where is the master branch? can you see it?
+- when i doing onli git log i see only the commits the i created before the thierd commit and the thierd commit itself,when i was the git log --all i see all the commits that i created (all the seven)
+
+#   - the files
+#      - are they all there?
+#      - what is their content?
+- the files on the commit return back to the status when i was doing the thierd commit,and their content back to to the saving contant when i was in the thierd commit
+ 
+# - tag your current commit with a memorable name, e.g. "version 1.0"
+- create the tag "version-1.0"
+# - look at the log
+-  git log
+# - checkout a different commit
+- checkout to the "six commit"
+# - create a branch at this commit with a reasonable name, e.g. "fix/1"
+- doing git branch fix/1
+# - look at the log
+- doing git log
+#    - where is HEAD? What state is it in? what is it attached to?
+- the Head is on the "six commit" and need to switchto  the new branch by the name fix/1.
+#    - where is the master branch? can you see it?
+- the master is remaning on the "seven commit"
+
+#    - where is the tag you created earlier?
+- the tag is remaning on the "thierd commit" and i check it with the commend git log
+
+# - jump back to master
+- git switch master
+# - examine
+# - the log, with & without --all
+- with the both of them i can see the master branch he coming after the new branch and see all the commites before the master
+#  - where is HEAD? What state is it in?
+- the Head now is pointing to the master and attached again
+
+#  - where is the master branch? can you see it?
+ the master branch is now pointing by the head and i can see him 
+
+#   - the files
+#      - are they all there?
+yes
+#      - what is their content?
+- the contant is change back and he return to the status that was in the currect master branch
+
+ 
+ Excercise 3 - Working with remote
+ ---------------------------------
+# - create a new, empty, private github repository
+- https://github.com/Yuval-Klechevsky/git-excercise.git
+# - set it as the origin of your repository
+- i was use the commend git remote add origin https://- github.com/Yuval-Klechevsky/git-excercise.git
+# - push your changes to github
+git push -u origin master
+
+# - change a file
+# - commit
+# - check git status. where is this file in git terms (local-untracked / staged / committed)
+
+- file is commited succesfuly
+"nothing to commit, working tree clean
+
+# - clone the remote repository into a new folder, "FOLDER2"
+- mkdir Folder2
+
+- git clone git@github.com:Yuval-Klechevsky/- - -     git-excercise.git Folder2
+
+# - take a look and compare the git log
+#   - in FOLDER1
+ the update of the projact ,nothing missing
+#   - in FOLDER2
+the repository i been clone from github and missing in one commit
+#   - on the remote repository
+the same as Folder2
+# - push changes in FOLDER1
+git push 
+(git push origin master)
+# - take a look and compare the git log
+#   - in FOLDER1
+ the update of the projact ,nothing missing
+#   - in FOLDER2
+the repository i been clone from github and missing in one commit
+#   - on the remote repository
+the same as Folder1
+# - pull remote to FOLDER2
+git pull
+# - take a look and compare the git log
+#   - in FOLDER1
+#   - in FOLDER2
+#   - on the remote repository
+same as Folder1
+
+ Excercise 4 - Remote Branches
+ -----------------------------
+# - Fork the repository https://github.com/prithvipsingh/branchtutorial.git
+
+# - look at log and graph
+ i can see all the commits that be created and the graph
+# - list the local branches
+i have 1 brancges
+
+# -  list the remote branches
+i have on the remote 6 branches
+
+# - checkout branch h2 and list all remote branches - what is your tracking branch?
+
+ i am in a branch h2 and i can tracking branches h2 and master
+
+ Excercise 5 - Branches
+ ----------------------
+# - create a new branch “new-branch”
+# - checkout to branch “new-branch”
+git switch -c "new-branch"
+(git branch new-branch)
+(git switch new-branch)
+# - create a  new file “file3.txt” with some text
+touch file3.txt
+# - add and commit the file
+git add file3.txt
+git commit -m "nine commit"
+# - push “new-branch” to origin “new-branch”
+git push origin new-branch 
+
+# - checkout back to master
+git switch master
+# - create a new file “file4.txt” and add some text
+touch file4.txt
+# - add and commit “file4.txt”
+git add file4.txt
+git commit -m " ten commit"
+# - push changes to origin master
+git push origin master
+# - check in github both branches
+ branch branch-new contains file3.txt
+ branch master contains file4.txt
+# - create a new branch “my-second-branch”
+git branch my-second-branch
+
+# - rename  “my-second-branch” “temp-branch”
+git branch -m my-second-branch temp-branch
+
+# - push  “temp-branch” to origin
+git push origin temp-branch 
+
+# - delete local  “temp-branch”
+git branch -d temp-branch
+# - delete remote  “temp-branch”
+git push -d origin temp-branch 
+
+ Excercise 6 - Merging basics
+----------------------------
+# - checkout to master
+git switch master
+# - print “Hello” to file1.txt
+echo "Hello" > file1.txt
+# - add and commit changes
+git add file1.txt
+git commit -m "eleven commit "
+# - checkout to new-branch
+git switch new-branch
+# - print “Hi” to file1.txt
+echo "Hi" > file1.txt
+git add file1.txt
+git commit -m "twelv commit"
+# - try to merge master into new-branch 
+git merge master
+# - fix conflicts
+accept both changes
+# - try again to merge master into new-branch
+git add .
+git commit "merge commit"
+git log

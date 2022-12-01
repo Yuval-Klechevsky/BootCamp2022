@@ -1,0 +1,7 @@
+1.file or folder
+2.check if it recursive 
+3.check if the file isn't compress -> zip it on the name 'fc-<name>
+4.check if the file is compress -> move(change name) to fc-<name> and touch it (update him)
+5.if the file call fc and is older 48 houers remove the file/folder
+6.if this folder go into the folder and do the check of the file(1.2.3.4.5)
+7.in we in the recusive mod we chacek all the file from the first to the last
